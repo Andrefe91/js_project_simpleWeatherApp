@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="query">
+                <div class="field">
+                    <div class="searchIcon">O</div>
+                    <form action="" id="queryForm">
+                        <label for="location"></label>
+                        <input type="text" name="location" id="location" placeholder="Location">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+                <div class="information outlined">
+                    <div class="variables hidden">
+                        <h3>Weather Information</h3>
+                        <p class="variable">Location</p>
+                            <span id="locationLong"></span>
+                        <p class="variable">Latitude</p>
+                            <span id="latitude"></span>
+                        <p class="variable">Longitude</p>
+                            <span id="longitude"></span>
+                        <p class="variable">Time-Zone</p>
+                            <span id="timeZone"></span>
+                        <p class="variable">Temperature</p>
+                            <span id="temperature" class="grades"></span>
+                        <p class="variable">Feels Like</p>
+                            <span id="temperatureFeelsLike" class="grades"></span>
+                        <p class="variable">Description</p>
+                            <div id="climateDescription"></div>
+                        <p class="variable">Condition</p>
+                            <span id="currentCondition"></span>
+                    </div>
+
+                    <div class="mapError">
+                        <p>Search for a location to start</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="map outlined">
+                <div class="mapError">
+                    <p>Search for a Location to start</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
