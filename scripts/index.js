@@ -17,6 +17,7 @@ form.addEventListener("submit", (event) => {
 			//Hide all the messages in the DOM tree and show the variables
 			hideAllMessages();
 			assignQueryInformation(response);
+			getMap([response["latitude"], response["longitude"]]);
 		})
 		.catch((error) => {
 			//Show the error message in the DOM tree
@@ -52,6 +53,18 @@ async function getQueryInformation(location) {
 	} catch (error) {
 		console.log(error);
 	}
+}
+
+async function getMap(location) {
+	let latitude = location[0];
+	let longitude = location[1];
+
+	let size = "624x512";
+	let zoomLevel = "11";
+
+	let urlConstructed = `https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=${zoomLevel}&maptype=terrain&size=${size}&key=AIzaSyAvwf6vYl5x-rogTGQVmlWmsxgx8lBAib4`;
+
+	document.querySelector("#map").src = urlConstructed;
 }
 
 function assignQueryInformation(responseJson) {
